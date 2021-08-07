@@ -1,3 +1,8 @@
+# This script will create all you need for a hunt group and tie it all together
+# This creates a Line Group, Hunt List, and Pilot
+# There's also logic to specify if you want calls to rona to a VM box
+# If you want calls to rona to another number other than a VM box you will need to tweak the code a bit
+
 from lxml import etree
 from requests import Session
 from requests.auth import HTTPBasicAuth
