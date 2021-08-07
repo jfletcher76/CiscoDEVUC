@@ -36,8 +36,24 @@ You are going to need a few things to run any python scripts in your environment
 Python (for windows): https://www.python.org/downloads/windows/
 PIP (for installing modules): https://pip.pypa.io/en/stable/installation/
 Python-DotENV: https://pypi.org/project/python-dotenv/
+PySimpleGUI: https://pysimplegui.readthedocs.io/en/latest/ (If you plan on using the file open pop-up)
 
 DotENV is a good one to get.  This is where you store sensitive information like passwords, login IDs, IP addresses that your
 scripts can reference instead of putting the info directly into scripts.  This way if you sync to a repo, you don't sync sensitive
 information for the public to exploit.  
+
+In Cisco CUCM you will need to download the wsdl toolkit from the downloads page and put it somewhere on your local PC.  
+From there you can point your scripts at that wsdl file like this: WSDL_FILE = 'C:/folder/AXLAPI.wsdl'
+
+You will need to have a user in CUCM with 3rd party axl permissions.  This can be a regular user or application user.  Your
+.env file should look like this:
+
+AXL_USERNAME='CUCM_USER'
+AXL_PASSWORD='PASSWORD'
+CUCM_ADDRESS='10.1.1.1'
+
+The .env file should be located at the root of your code folder structure.  When you want to access the file you simply
+use os.getenv('CUCM_USER') for example. You must load the .env module at the beginning of your scripts along with the 
+os module.  See my scripts for examples. 
+
 ```
