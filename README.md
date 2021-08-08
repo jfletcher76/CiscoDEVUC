@@ -12,7 +12,7 @@ will work or won't on your environment.
 
 I use VS Code to edit in.  There's LOTS of stuff out there and everyone has their opinions.  VS Code was what I 
 started with and have found to meet my needs.  And I can hook it up to Git/Azure just fine.  Link below to install
-VS code if you want to give that a try.  The python you install for windows will have its own editors to.
+VS code if you want to give that a try.  The python you install for windows will have its own editors too.
 
 If you see areas of improvements in scripts please don't hesitate to let me know at jasunfletcher@gmail.com as 
 I'm always up for learning better ways to do things with Python.
@@ -52,7 +52,8 @@ AXL_USERNAME='CUCM_USER'
 AXL_PASSWORD='PASSWORD'
 CUCM_ADDRESS='10.1.1.1'
 
-The .env file should be located at the root of your code folder structure.  When you want to access the file you simply
+The .env file should be located at the root of your code folder structure and your .gitIgnore NEEDS TO include this .env file 
+or it will sync to your repo and you don't want that.  When you want to access the file you simply
 use os.getenv('CUCM_USER') for example. You must load the .env module at the beginning of your scripts along with the 
 os module.  See my scripts for examples. 
 
