@@ -2,7 +2,7 @@
 
 ```
 These are various scripts used in my daily operations within a Cisco CUCM and CUC environment.
-Other scripts may show up in here as well, but the builk with be Cisco driven scripts.  I am hoping
+Other scripts may show up in here as well, but the bulk will be Cisco UC driven scripts.  I am hoping
 this is a place for others like myself to learn how to interact with the powerful Cisco API
 
 I'm fairly new at scripting.  So I always advise running scripts within a dev environment first.  Please
