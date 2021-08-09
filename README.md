@@ -12,7 +12,10 @@ will work or won't on your environment.
 
 I use VS Code to edit in.  There's LOTS of stuff out there and everyone has their opinions.  VS Code was what I 
 started with and have found to meet my needs.  And I can hook it up to Git/Azure just fine.  Link below to install
-VS code if you want to give that a try.  The python you install for windows will have its own editors too.
+VS code if you want to give that a try.  The python you install for windows will have its own editors too.  If you use
+VS Code I recommend going to file, preferences, settings and searching for "flake".  Under Python › Linting: Flake8 Args 
+click add and put in this "python.linting.flake8Args": ["--max-line-length=120"] including all the quotes.  This will
+get rid of all the weird errors that VS Code thinks your script has.  
 
 If you see areas of improvements in scripts please don't hesitate to let me know at jasunfletcher@gmail.com as 
 I'm always up for learning better ways to do things with Python.
