@@ -92,8 +92,8 @@ line = {
     'alertingName': (lastName + ', ' + firstName),
     'asciiAlertingName': (lastName + ', ' + firstName),
     'usage': 'Device',
-    'routePartitionName': ('GLOBAL_DN_PT'),
-    'voiceMailProfileName': 'KAR_VM',
+    'routePartitionName': ('<your partition here>'),
+    'voiceMailProfileName': '<your VM profile here>',
     'shareLineAppearanceCssName': ('<your css here>'),
     'callForwardAll':
         {
