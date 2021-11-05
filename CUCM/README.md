@@ -1,4 +1,4 @@
-# **You will need this for most all CUCM interactions. This should be the first thing in every script**
+# You will need this for most all CUCM interactions. This should be the first thing in every script
 
 ```
 from lxml import etree
@@ -76,7 +76,7 @@ service = client.create_service( '{http://www.cisco.com/AXLAPIService/}AXLAPIBin
                                 f'https://{os.getenv( "CUCM_ADDRESS" )}:8443/axl/' )
 ```
 
-# **If you don't want debugging, you can slim down the above using the below**
+# If you don't want debugging, you can slim down the above using the below
 
 ```
 from requests import Session
