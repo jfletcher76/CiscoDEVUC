@@ -6,10 +6,11 @@
 # Modify this script as you see fit if you do not like the above, or insert variables to get the info for the above real time
 
 # This script will go through a CSV file and build phones instead of having to use the clunky batch method in CUCM
+# This script assumes you are wanting to associate a user to the phone and will do so using the email variable
+# This script also associates the user to the line when adding the phone for presence purposes using the email variable
 
 import time
 import csv
-import requests
 from requests.auth import HTTPBasicAuth
 from lxml import etree
 from requests import Session
@@ -289,7 +290,7 @@ with open(fname) as f:
             #     print( resp,'\n' )
 
         if errCount == 0:
-            # Update User account ot associate CSF to their profile
+            # Update User account ot associate phone to their profile
             try:
                 resp = service.updateUser ( 
                     userid = (userEmail), 
