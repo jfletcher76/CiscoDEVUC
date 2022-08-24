@@ -125,3 +125,34 @@ service = client.create_service( '{http://www.cisco.com/AXLAPIService/}AXLAPIBin
                                 f'https://{os.getenv( "CUCM_ADDRESS" )}:8443/axl/' )
 
 ```
+#### If you want even LESS code, do this 
+
+```
+from requests import Session
+from requests.auth import HTTPBasicAuth
+from zeep import Client, Settings
+from zeep.transports import Transport
+from zeep.exceptions import Fault
+import sys
+import urllib3
+
+# edit .env file for your server and credentials
+import os
+from dotenv import load_dotenv
+load_dotenv()
+
+DEBUG = False
+# The WSDL is a local file in the working directory, see README
+# WSDL_FILE = 'schema/AXLAPI.wsdl'
+WSDL_FILE = '<your wsdl file path here>'
+session = Session()
+session.verify = False
+urllib3.disable_warnings( urllib3.exceptions.InsecureRequestWarning )
+session.auth = HTTPBasicAuth( os.getenv( 'AXL_USERNAME' ), os.getenv( 'AXL_PASSWORD' ) )
+transport = Transport( session = session, timeout = 10 )
+settings = Settings( strict = False, xml_huge_tree = True )
+client = Client( WSDL_FILE, settings = settings, transport = transport)
+service = client.create_service( '{http://www.cisco.com/AXLAPIService/}AXLAPIBinding',
+                                f'https://{os.getenv( "CUCM_ADDRESS" )}:8443/axl/' )
+
+```
