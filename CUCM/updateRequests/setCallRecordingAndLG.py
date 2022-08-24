@@ -19,7 +19,8 @@ from dotenv import load_dotenv
 load_dotenv()
 
 DEBUG = False
-WSDL_FILE = '//p-uctools-101/cucmwsdl/AXLAPI.wsdl'
+# Add the path to your WSDL file on the line below
+WSDL_FILE = 'AXLAPI.wsdl'
 session = Session()
 session.verify = False
 urllib3.disable_warnings( urllib3.exceptions.InsecureRequestWarning )
