@@ -40,6 +40,7 @@ Python (for windows): https://www.python.org/downloads/windows/
 PIP (for installing modules): https://pip.pypa.io/en/stable/installation/
 Python-DotENV: https://pypi.org/project/python-dotenv/
 PySimpleGUI: https://pysimplegui.readthedocs.io/en/latest/ (If you plan on using the file open pop-up)
+Git: https://git-scm.com/download/win
 
 DotENV is a good one to get.  This is where you store sensitive information like passwords, login IDs, IP addresses that your
 scripts can reference instead of putting the info directly into scripts.  This way if you sync to a repo, you don't sync sensitive
